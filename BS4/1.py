@@ -42,3 +42,10 @@ for parent in soup.p.b.parents:
 print('-'*30)
 print(soup.a.previous_sibling)
 print(soup.a.next_sibling)
+# 获取第一个a标签内部文字
+print(soup.a.string)
+# 获得指定a标签内部文字
+print(soup.find_all('a')[2].string)
+# 获取所有a标签文字
+for a_str in soup.find_all('a'):
+    print(a_str.string)
